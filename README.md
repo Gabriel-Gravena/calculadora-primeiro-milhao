@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Calculadora do Primeiro Milhão - Frontend
 
-## Getting Started
+Esta é a interface do usuário para a aplicação "Calculadora do Primeiro Milhão", construída com Next.js e Tailwind CSS. A aplicação oferece uma experiência de usuário moderna e engajadora para simular investimentos de longo prazo.
 
-First, run the development server:
+## ✨ Features
+
+-   **Landing Page (Hero Section):** Uma página inicial moderna e profissional que apresenta a proposta de valor da ferramenta.
+-   **Autenticação de Usuário:** Formulários de cadastro e login com feedback visual e tratamento de erros.
+-   **Gerenciamento de Sessão Global:** Utiliza o Contexto do React para gerenciar o estado de autenticação em toda a aplicação, permitindo login automático e proteção de rotas.
+-   **Calculadora Interativa:** Interface limpa para inserir os parâmetros do investimento e visualizar os resultados.
+-   **Visualização de Resultados:** Apresenta um resumo claro e imediato do resultado da simulação, além de uma tabela detalhada com scroll para a projeção mês a mês.
+-   **Página de Histórico:** Permite que o usuário exclua suas simulações salvas.
+
+## 🛠️ Stack Utilizada
+
+-   **Framework:** [Next.js](https://nextjs.org/) (com App Router)
+-   **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+-   **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
+-   **Componentes de UI:** [shadcn/ui](https://ui.shadcn.com/)
+-   **Gráficos:** [Recharts](https://recharts.org/)
+
+## 🚀 Como Configurar e Rodar Localmente
+
+Siga as instruções abaixo para configurar e executar o frontend em seu ambiente de desenvolvimento.
+
+### Pré-requisitos
+
+-   [Node.js](https://nodejs.org/) (v18 ou superior)
+-   **A API Backend deve estar rodando localmente** em `http://localhost:3333`.
+
+### 1. Clonar o Repositório
+
+```bash
+git clone https://github.com/Gabriel-Gravena/calculadora-primeiro-milhao.git
+cd calculadora-primeiro-milhao
+```
+
+### 2. Instalar as Dependências
+
+```bash
+npm install
+```
+
+### 3. Configurar as Variáveis de Ambiente
+
+Crie um arquivo chamado `.env.local` na raiz do projeto. Este arquivo conterá a URL da sua API backend.
+
+```env
+# .env.local
+
+# URL da API backend rodando localmente
+NEXT_PUBLIC_API_URL=http://localhost:3333
+```
+**Importante:** O prefixo `NEXT_PUBLIC_` é obrigatório para que o Next.js exponha esta variável ao código que roda no navegador.
+
+### 4. Iniciar a Aplicação
+
+Certifique-se de que a API backend já esteja em execução e então inicie o servidor de desenvolvimento do frontend.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🎉 A aplicação estará acessível em `http://localhost:3000`.
